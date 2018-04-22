@@ -8,13 +8,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>microservice-discovery-eureka</artifactId>
-
 	<dependencies>
+		<!-- Eureka服务中心 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		
+		<!--认证授权服务 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-security</artifactId>

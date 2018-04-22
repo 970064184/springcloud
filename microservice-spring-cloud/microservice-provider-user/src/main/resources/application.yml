@@ -1,5 +1,5 @@
 server:
-  port: 7900
+  port: 7904
 spring:
   jpa:
     generate-ddl: false
@@ -11,7 +11,7 @@ spring:
     schema: classpath:schema.sql
     data: classpath:data.sql
   application:
-    name: microservice-provider-user  #建议全部使用小写
+    name: microservice-provider-user2  #建议全部使用小写
 logging:
   level:
     root: INFO
@@ -24,8 +24,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://user:password123@localhost:8761/eureka
+    healthcheck:
+      enabled: true  
   instance:
     prefer-ip-address: true
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
-   
+
+management:
+  security:
+    enabled: false   
     
