@@ -5653,3 +5653,18 @@ Contains: The project description file (.project) for 'microservice-consumer-mov
 !MESSAGE Errors occurred while refreshing resources with the local file system.
 !SUBENTRY 2 org.eclipse.core.resources 4 567 2018-04-23 11:24:40.150
 !MESSAGE The project description file (.project) for 'microservice-consumer-movie-ribbon-without-eureka' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.core.resources 2 2 2018-04-23 11:29:40.539
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-consumer-movie' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-consumer-movie-ribbon' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-consumer-movie-ribbon-properties-customizing' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-consumer-movie-ribbon-without-eureka' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-discovery-eureka' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-23 11:29:40.539
+!MESSAGE The project description file (.project) for 'microservice-provider-user' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
