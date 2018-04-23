@@ -1,9 +1,9 @@
 server:
-  port: 7901
+  port: 8012
 
 spring:
   application:
-    name: microservice-provider-movice
+    name: microservice-provider-movie-ribbon
 
 ###eureka提供者配置
 eureka:
@@ -15,7 +15,12 @@ eureka:
   instance:
     prefer-ip-address: true
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#禁用Eureka
+ribbon:
+  eureka:
+   enabled: false
 
-management:
-  security:
-    enabled: false
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:7900
+    

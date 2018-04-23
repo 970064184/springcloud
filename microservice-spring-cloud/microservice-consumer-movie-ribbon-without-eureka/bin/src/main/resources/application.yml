@@ -1,5 +1,5 @@
 server:
-  port: 8010
+  port: 8012
 
 spring:
   application:
@@ -15,7 +15,12 @@ eureka:
   instance:
     prefer-ip-address: true
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#禁用Eureka
+ribbon:
+  eureka:
+   enabled: false
 
-management:
-  security:
-    enabled: false
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:7900
+    
