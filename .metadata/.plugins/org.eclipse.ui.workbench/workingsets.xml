@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1524451734931_1" label="microservice-spring-cloud" name="microservice-spring-cloud">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/microservice-consumer-movie-ribbon" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1523861657491_0" label="Window Working Set" name="Aggregate for window 1523861657489"/>
+</workingSetManager>
