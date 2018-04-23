@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model>
-<aop-project name="microservice-provider-user"/>
-<aop-project name="microservice-spring-cloud"/>
-<aop-project name="microservice-consumer-movie"/>
-<aop-project name="microservice-discovery-eureka"/>
-</aop-reference-model>

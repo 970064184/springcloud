@@ -1,7 +1,0 @@
-/build
-/local.properties
-.gitignore
-*.class
-.classpath
-.project
-.settings/
