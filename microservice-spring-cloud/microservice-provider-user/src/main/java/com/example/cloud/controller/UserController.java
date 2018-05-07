@@ -1,5 +1,8 @@
 package com.example.cloud.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.cloud.entity.User;
 import com.example.cloud.repository.UserRepository;
+import com.google.common.collect.Lists;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 
@@ -50,6 +54,17 @@ public class UserController {
 	@GetMapping("/get-user")
 	public User getUser(User user) {
 		return user;
+	}
+	@GetMapping("/list-all")
+	public List<User> listAll() {
+		ArrayList<User> list = Lists.newArrayList();
+		User user1 = new User(1L,"zhangsan");
+		User user2 = new User(1L,"zhangsan");
+		User user3 = new User(1L,"zhangsan");
+		list.add(user1);
+		list.add(user2);
+		list.add(user3);
+		return list;
 	}
 }
 
