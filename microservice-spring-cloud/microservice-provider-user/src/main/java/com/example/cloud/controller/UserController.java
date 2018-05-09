@@ -35,7 +35,7 @@ public class UserController {
 		return userRepository.findOne(id);
 	}
 	
-	@GetMapping("eureka-instance")
+	@GetMapping("/eureka-instance")
 	public String serviceUrl() {
 	    InstanceInfo instance = eurekaClient.getNextServerFromEureka("MICROSERVICE-PROVIDER-USER", false);
 	    return instance.getHomePageUrl();
