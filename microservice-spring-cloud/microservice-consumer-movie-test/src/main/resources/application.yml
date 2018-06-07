@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: microservice-provider-movice
+    name: microservice-consumer-movie-test
 
 ###eureka提供者配置
 eureka:

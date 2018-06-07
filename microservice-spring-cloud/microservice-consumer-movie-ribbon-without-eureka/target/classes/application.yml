@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: microservice-provider-movie-ribbon
+    name: microservice-consumer-movie-ribbon-without-eureka
 
 ###eureka提供者配置
 eureka:
