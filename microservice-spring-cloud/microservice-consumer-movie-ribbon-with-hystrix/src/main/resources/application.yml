@@ -1,5 +1,6 @@
 server:
   port: 8013
+#  context-path: /ribbon
 
 spring:
   application:
@@ -14,6 +15,7 @@ eureka:
       enabled: true  
   instance:
     prefer-ip-address: true
+#    home-page-url-path: /ribbon
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 management:
