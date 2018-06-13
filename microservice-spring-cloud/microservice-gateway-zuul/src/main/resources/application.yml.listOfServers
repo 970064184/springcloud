@@ -1,0 +1,37 @@
+#负载均衡
+spring:
+  application:
+    name: microservice-gateway-zuul
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password123
+
+server:
+  port: 8040
+  
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+     # defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    
+zuul:
+  routes:
+     abc: #只要是唯一的就行
+       path: /user-path/**
+       serviceId: microservice-provider-user
+
+ribbon:
+  eureka:
+    enabled: false
+
+microservice-provider-user: #这边是serviceId
+  ribbon:
+    listOfServers: http://localhost:7900,http://localhost:7901

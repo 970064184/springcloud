@@ -93,8 +93,11 @@
 		<module>microservice-consumer-movie-ribbon-with-hystrix2</module>
 		<module>microservice-consumer-movie-ribbon-with-hystrix3</module>
 		<module>microservice-hystrix-turbine3</module>
+		<module>microservice-gateway-zuul</module>
+		<module>microservice-gateway-zuul-reg-exp</module>
+		<module>microservice-file-upload</module>
+		<module>microservice-gateway-zuul-fallback</module>
+		<module>microservice-gateway-zuul-filter</module>
 		
-		
-
 	</modules>
 </project>
