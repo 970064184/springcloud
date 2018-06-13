@@ -7,4 +7,10 @@ spring:
       server:
         git:
           uri: https://github.com/970064184/springcloud
+
+logging:
+  level:
+    root: INFO
+    com.netflix.turbine.monitor: DEBUG
+    
   
