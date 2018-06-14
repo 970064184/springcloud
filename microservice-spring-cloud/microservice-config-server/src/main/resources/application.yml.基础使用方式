@@ -1,0 +1,16 @@
+
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/970064184/config-repo
+
+logging:
+  level:
+    root: INFO
+    com.netflix.turbine.monitor: DEBUG
+    
+  

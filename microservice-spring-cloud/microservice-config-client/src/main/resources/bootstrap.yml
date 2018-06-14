@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8080
+      profile: test
+      label: master #当config server的后端存储是git时，默认是master
+#  application:
+#    name: foobar #可用eureka.instance.name代替
+

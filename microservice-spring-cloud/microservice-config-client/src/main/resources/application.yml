@@ -2,16 +2,7 @@
 server:
   port: 8081
 
-
-spring:
-  cloud:
-    config:
-      uri: http:localhost:8080
-  application:
-    name: 
-
-
-logging:
+logging: 
   level:
     root: INFO
     com.netflix.turbine.monitor: DEBUG
