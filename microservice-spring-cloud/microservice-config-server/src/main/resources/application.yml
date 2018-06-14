@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/970064184/config-repo
+          uri: https://github.com/970064184/{application}
 
 logging:
   level:
