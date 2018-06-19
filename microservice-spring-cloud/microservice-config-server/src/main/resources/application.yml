@@ -7,5 +7,3 @@ spring:
       server:
         git:
           uri: https://github.com/970064184/config-repo
-encrypt:
-  key: foo

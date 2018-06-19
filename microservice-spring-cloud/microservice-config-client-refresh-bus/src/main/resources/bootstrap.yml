@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8080
+      profile: dev
+      label: master #当config server的后端存储是git时，默认是master
+  application:
+    name: foobar 
+  rabbitmq: #spring cloud bus配置
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false
