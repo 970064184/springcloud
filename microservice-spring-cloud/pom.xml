@@ -100,5 +100,9 @@
 		<module>microservice-gateway-zuul-filter</module>
 		<module>microservice-config-server</module>
 		<module>microservice-config-client</module>
+		<module>microservice-config-server-eureka</module>
+		<module>microservice-config-client-eureka</module>
+		<module>microservice-config-client-refresh</module>
+		
 	</modules>
 </project>
