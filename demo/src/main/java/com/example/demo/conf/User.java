@@ -10,6 +10,16 @@ public class User {
 	@ApiModelProperty("用户名")
 	private String name;
 
+	private boolean flag;
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
 	public Long getId() {
 		return id;
 	}
