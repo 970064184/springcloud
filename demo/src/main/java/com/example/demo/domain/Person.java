@@ -1,14 +1,16 @@
 package com.example.demo.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Person {
 
-	@Getter
-	@Setter
 	private Long id;
 
 	private String userName;

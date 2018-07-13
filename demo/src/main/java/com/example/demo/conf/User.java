@@ -40,4 +40,12 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + "]";
 	}
+
+	public User(Long id, String name, boolean flag) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.flag = flag;
+	}
+
 }
