@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import com.example.demo.conf.User;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,5 +18,11 @@ public class Person {
 	private String userName;
 
 	private int age;
+
+	private User user;
+
+	public void test() {
+		user.toString();
+	}
 
 }

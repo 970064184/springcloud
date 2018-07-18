@@ -9,7 +9,7 @@ public class User {
 	private Long id;
 	@ApiModelProperty("用户名")
 	private String name;
-
+	@ApiModelProperty("标识")
 	private boolean flag;
 
 	public boolean isFlag() {

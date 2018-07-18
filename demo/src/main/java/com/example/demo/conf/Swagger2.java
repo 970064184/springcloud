@@ -3,6 +3,7 @@ package com.example.demo.conf;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 import com.google.common.collect.Lists;
 
@@ -14,6 +15,7 @@ import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration;
 
 /**
  * Swagger2配置类
@@ -23,18 +25,20 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @ConditionalOnProperty(prefix = "api", name = "docs", havingValue = "enable", matchIfMissing = false)
-// @ConditionalOnProperty(prefix = "api", value = { "enable" }, havingValue =
-// "true", matchIfMissing = false)
+@Import({ Swagger2DocumentationConfiguration.class })
 public class Swagger2 {
 
 	/*
-	 * @Value("${swagger.enable}") private boolean enableSwagger;
+	 * @Value("${api.docs}") private boolean enableSwagger;
 	 */
 
 	@Bean
 	public Docket createRestApi() {
-		// return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())/*
-		// .enable(enableSwagger) */.select()
+		/*
+		 * return new
+		 * Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).enable(enableSwagger).
+		 * select()
+		 */
 
 		return new Docket(DocumentationType.SWAGGER_2)
 				.globalOperationParameters(Lists.newArrayList(new ParameterBuilder().name("")

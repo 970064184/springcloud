@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients(value="com.example.cloud.feign")
-@ComponentScan(value="com.example.cloud")
+@EnableFeignClients("com.example.cloud.feign")
+@ComponentScan(value = "com.example.cloud")
 public class MicroserviceConsumerMovieApplication {
-	
+
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();

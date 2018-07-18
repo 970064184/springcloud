@@ -1,2 +1,4 @@
+#api:  
+#  docs: true
 api:  
-  docs: disable  #enable
+  docs: enable
