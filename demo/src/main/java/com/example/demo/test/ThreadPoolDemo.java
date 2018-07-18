@@ -15,7 +15,6 @@ public class ThreadPoolDemo {
 	private static AtomicInteger count = new AtomicInteger(11);
 
 	public static void main(String[] args) {
-
 		ExecutorService threadPool = Executors.newFixedThreadPool(6);
 		while (count.intValue() > 0) {
 			threadPool.execute(() -> {
