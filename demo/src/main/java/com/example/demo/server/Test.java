@@ -12,6 +12,6 @@ public abstract class Test implements PersonInterface {
 
 	@Override
 	public List<Person> findAll() {
-		return Arrays.asList(new Person(123l, "test", number));
+		return Arrays.asList(Person.builder().age(9).gender(1).userName("test").build());
 	}
 }

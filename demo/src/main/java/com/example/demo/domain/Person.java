@@ -17,6 +17,8 @@ public class Person {
 
 	private int age;
 
-	// private int gender;
+	private int gender;
+
+	private int height;
 
 }

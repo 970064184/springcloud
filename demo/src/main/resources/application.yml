@@ -1,4 +1,4 @@
-#api:  
-#  docs: true
-api:  
-  docs: enable
+spring:
+  profiles:
+    active:
+    - dev

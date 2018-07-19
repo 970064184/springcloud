@@ -1,5 +1,7 @@
 package com.example.demo.conf;
 
+import com.alibaba.fastjson.JSONObject;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,14 +13,16 @@ public class Dto<T> {
 	private String msg;
 	@ApiModelProperty("返回值")
 	private T data;
-	
-	
-	
+
+	public Dto() {
+		super();
+	}
+
 	public Dto(T data) {
 		super();
 		this.data = data;
 	}
-	
+
 	public Long getCode() {
 		return code;
 	}
@@ -30,15 +34,20 @@ public class Dto<T> {
 	public String getMsg() {
 		return msg;
 	}
+
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
 	public T getData() {
 		return data;
 	}
+
 	public void setData(T data) {
 		this.data = data;
 	}
-	
-	
+
+	public String toJson() {
+		return JSONObject.toJSONString(this);
+	}
 }
