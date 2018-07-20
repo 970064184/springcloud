@@ -14,4 +14,6 @@ public interface TestService {
 
 	void updateUser(User user);
 
+	void delUser(String id);
+
 }

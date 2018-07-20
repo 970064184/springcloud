@@ -50,4 +50,10 @@ public class Dto<T> {
 	public String toJson() {
 		return JSONObject.toJSONString(this);
 	}
+
+	@Override
+	public String toString() {
+		return "Dto [code=" + code + ", msg=" + msg + ", data=" + data + "]";
+	}
+
 }

@@ -101,4 +101,22 @@ public class TestController {
 		return dto.toJson();
 	}
 
+	@ApiOperation(value = "删除用户", notes = "根据用户id删除用户信息")
+	@GetMapping(value = "/delUser/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public String delUser(@PathVariable("id") String id) {
+		Dto dto = new Dto<>();
+		testService.delUser(id);
+		dto.setData("success");
+		System.out.println(dto);
+		try {
+			Class c = Class.forName("com.example.demo.domain.User");
+			System.out.println(c);
+			Class<? extends TestController> class1 = this.getClass();
+			System.out.println(class1);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return dto.toJson();
+	}
+
 }

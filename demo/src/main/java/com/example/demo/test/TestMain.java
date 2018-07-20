@@ -1,5 +1,8 @@
 package com.example.demo.test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.example.demo.domain.Person;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +35,11 @@ public class TestMain {
 		}
 
 		System.out.println("代码块结束");
+
+		String regex = "^[\\d]";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher("2fshdsjk8");
+		System.out.println(m.matches());
 
 		/*
 		 * Demo02 d = new Demo02(); try { int x = d.div(4, -1); System.out.println("x:"

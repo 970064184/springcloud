@@ -41,4 +41,9 @@ public class TestServiceImpl implements TestService {
 		jdbcTemplate.update(sql, new Object[] { user.getPhone(), user.getId() });
 	}
 
+	@Override
+	public void delUser(String id) {
+		String sql = "delete from pms_user where id =?";
+		jdbcTemplate.update(sql, new Object[] { id });
+	}
 }
