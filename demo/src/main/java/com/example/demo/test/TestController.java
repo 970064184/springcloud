@@ -2,6 +2,8 @@ package com.example.demo.test;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,8 +38,14 @@ public class TestController {
 
 	@ApiOperation(value = "第一个swagger测试", notes = "第一个swagger测试")
 	@GetMapping("test")
-	public String test() {
-		return "test!";
+	public String test(HttpServletRequest request) {
+		System.out.println(request.getRemoteHost());
+		System.out.println(request.getHeader("User-Agent"));
+		if (request.getHeader("User-Agent").contains("Android")) {
+			return "android test";
+		} else {
+			return "test!";
+		}
 	}
 
 	@ApiOperation(value = "获取请求url上的参数值", notes = "获取请求url上的参数值")
