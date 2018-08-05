@@ -4,7 +4,7 @@ server:
 #thymeleaf-springboot配置
 spring:
   thymeleaf:
-    cache: false #是否缓存，有缓存时会导致页面没法及时看到更新后的效果
+    cache: true #是否缓存，有缓存时会导致页面没法及时看到更新后的效果
     content-type: text/html; charset=utf-8
     enabled: true #是否启用
     encoding: UTF-8
@@ -50,7 +50,39 @@ spring:
      min-idle: 5
      max-active: 2000
      max-wait: 5000 
-      
+ #static    
+  resources:
+    add-mappings: true
+    cache-period: 3600
+    static-locations:
+    - classpath:/static/
+    chain:
+      cache: true
+      enabled: true
+      gzipped: true
+      html-application-cache: true
+ #rabbitmq
+  rabbitmq:
+    host: 
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 10 #消费者数量
+        max-concurrency: 10
+        prefetch: 1 #每次从队列中取几个
+        auto-startup: true
+        default-requeue-rejected: true
+        retry:
+          enabled: true
+          initial-interval: 1000
+          max-interval: 10000
+          max-attempts: 3
+          multiplier: 1.0
+          
+        
 #mybatis-springboot
 mybatis:
     type-aliases-package: com.example.project.domain
@@ -58,7 +90,6 @@ mybatis:
         map-underscore-to-camel-case: true
         default-fetch-size: 100
         default-statement-timeout: 3000
-
 
 
    
