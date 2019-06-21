@@ -39,6 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<!-- 依赖氛围 -->
 			<scope>test</scope>
 		</dependency>
 
@@ -50,6 +51,27 @@
 		</dependency>
 
 	</dependencies>
+
+	<!-- <repositories>
+		<repository>
+			<id>Nexus</id>
+			<name>Nexus Repository</name>
+			<url>http://192.168.230.129:8081/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>e-commerce-probject-snapshot</id>
+			<name>e commerce probject snapshot</name>
+			<url>http://192.168.230.129:8081/nexus/content/repositories/MyProbjectSnapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<id>e-commerce-probject</id>
+			<name>e commerce probject</name>
+			<url>http://192.168.230.129:8081/nexus/content/repositories/MyProbjectRelease/</url>
+		</repository>
+	</distributionManagement> -->
 	
 	<!-- 打jar包配置 -->
 	<build>
@@ -61,7 +83,7 @@
 		</plugins>
 	</build>
 
-
+	<!-- maven聚合 -->
 	<modules>
 		<module>seckill-probject</module>
 	</modules>
